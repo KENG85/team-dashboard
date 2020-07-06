@@ -113,115 +113,25 @@
         </div>
     </div>
     <!--================================= BEGIN DASHBOARD =============================================-->
-    <!--Position Stats-->
-
-    <section class="container-fluid section-space section-bg-1">
-        <div class="container" id="position-stats">
-            <h1 class="left">Position Stats</h1>
-            <!-- new nav tabs -->
-            <!-- Tab links -->
-            <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'QB')">QBs</button>
-                <button class="tablinks" onclick="openCity(event, 'WR')">WRs</button>
-                <button class="tablinks" onclick="openCity(event, 'DB')">CB/DBs</button>
-                <button class="tablinks" onclick="openCity(event, 'RB')">RBs</button>
-                <button class="tablinks" onclick="openCity(event, 'LB')">LBs</button>
-                <button class="tablinks" onclick="openCity(event, 'OL')">OL</button>
-                <button class="tablinks" onclick="openCity(event, 'DL')">DL</button>
-                <button class="tablinks" onclick="openCity(event, 'specials')">Specialists</button>
-    
-            
-            </div>
-            
-            <!-- Tab content -->
-            <div id="QB" class="tabcontent">
-                <h3>Quarterbacks</h3>
-                <p>
-                    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="480" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ea0ab1a6-0525-420b-b525-018e39804b51&theme=light"></iframe>
-                   
-                </p>
-            </div>
-            
-            <div id="WR" class="tabcontent">
-                <h3>Receivers</h3>
-                <p>
-                    
-                </p> 
-            </div>
-            
-            <div id="DB" class="tabcontent">
-                <h3>Corner/Defensive Backs</h3>
-                <p>
-                    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="480" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ccfa54e0-d2b2-4aa7-bf2a-c4edba1a1c61&theme=light"></iframe>
-                </p>
-            </div>
-            <div id="RB" class="tabcontent">
-                <h3>Running Backs</h3>
-                <p>Tokyo is the capital of Japan.</p>
-            </div>
-            <div id="LB" class="tabcontent">
-                <h3>Linebackers</h3>
-                <p>Tokyo is the capital of Japan.</p>
-            </div>
-            <div id="OL" class="tabcontent">
-                <h3>Offensive Line</h3>
-                <p>Tokyo is the capital of Japan.</p>
-            </div>
-            <div id="DL" class="tabcontent">
-                <h3>Defensive Line</h3>
-                <p>Tokyo is the capital of Japan.</p>
-            </div>
-            <div id="specials" class="tabcontent">
-                <h3>Specialists</h3>
-                <p>Tokyo is the capital of Japan.</p>
-            </div>
-            <!-- End tab links -->
-            <!-- Tab script -->
-            <script>
-            function openCity(evt, cityName) {
-                // Declare all variables
-                var i, tabcontent, tablinks;
-              
-                // Get all elements with class="tabcontent" and hide them
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                  tabcontent[i].style.display = "none";
-                }
-              
-                // Get all elements with class="tablinks" and remove the class "active"
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                  tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-              
-                // Show the current tab, and add an "active" class to the button that opened the tab
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-              }
-              </script>
-              <script>
-                var tabs=document.getElementById('tabcontent').getElementsByTagName("a");
-                for (var i=0; i < tabs.length; i++) {
-                    if(tabs[i].href == element.href) 
-                        tabs[i].className="selected";
-                    else
-                        tabs[i].className="";
-                };
-                </script>
-
-    <!-- ================ end nav tabs ==================-->
-
-           
-           
 
     <!--===============START charts====================-->
     <section class="container-fluid section-space section-bg-1" style="margin-bottom: 60px;">
-        <div class="container" id="geodata">
+        <div class="container" id="charts">
             <h1 class="left">Position Stats</h1>
-            <div class="center">
+            <div class="col-md-6">
                 <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="720px" src="charts/index.html"></iframe>
-        
-
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+    </div>
+    <section class="container-fluid section-space section-bg-1" style="margin-bottom: 60px;">
+        <div class="container" id="colleges">
+            <h1 class="left">Colleges</h1>
+            <div class="center">
+                <div class='tableauPlaceholder' id='viz1594002387147' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;College_15940023536840&#47;College&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='College_15940023536840&#47;College' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;College_15940023536840&#47;College&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1594002387147');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                </script>
             </div>
         </div>
     </div>
