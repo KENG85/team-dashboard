@@ -16,7 +16,7 @@
     crossorigin=""></script>
 
   <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="maps/style.css">
     
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
@@ -118,55 +118,123 @@
     <section class="container-fluid section-space section-bg-1">
         <div class="container" id="position-stats">
             <h1 class="left">Position Stats</h1>
+            <!-- new nav tabs -->
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'QB')">QBs</button>
+                <button class="tablinks" onclick="openCity(event, 'WR')">WRs</button>
+                <button class="tablinks" onclick="openCity(event, 'DB')">CB/DBs</button>
+                <button class="tablinks" onclick="openCity(event, 'RB')">RBs</button>
+                <button class="tablinks" onclick="openCity(event, 'LB')">LBs</button>
+                <button class="tablinks" onclick="openCity(event, 'OL')">OL</button>
+                <button class="tablinks" onclick="openCity(event, 'DL')">DL</button>
+                <button class="tablinks" onclick="openCity(event, 'specials')">Specialists</button>
+    
             
-             <!-- Nav tabs -->
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="qb-tab" data-toggle="tab" href="#qb" role="tab" aria-controls="qb" aria-selected="true">Quarterbacks</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="receivers-tab" data-toggle="tab" href="#wr" role="tab" aria-controls="wr" aria-selected="false">Receivers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="db-tab" data-toggle="tab" href="#db" role="tab" aria-controls="db" aria-selected="false">Corners & Defensive Backs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="rb-tab" data-toggle="tab" href="#rb" role="tab" aria-controls="runningbacks" aria-selected="false">Running Backs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="lb-tab" data-toggle="tab" href="#lb" role="tab" aria-controls="Linebackers" aria-selected="false">Linebackers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="linemen-tab" data-toggle="tab" href="#linemen" role="tab" aria-controls="linemen" aria-selected="false">Linemen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="specialists-tab" data-toggle="tab" href="#specialists" role="tab" aria-controls="specialists" aria-selected="false">Specialists</a>
-                </li>
-            </ul>
+            </div>
             
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div class="tab-pane active" id="qb" role="tabpanel" aria-labelledby="qb-tab">
+            <!-- Tab content -->
+            <div id="QB" class="tabcontent">
+                <h3>Quarterbacks</h3>
+                <p>
                     <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="480" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ea0ab1a6-0525-420b-b525-018e39804b51&theme=light"></iframe>
-                </div>
-                <div class="tab-pane" id="wr" role="tabpanel" aria-labelledby="wr-tab">...</div>
-                <div class="tab-pane" id="db" role="tabpanel" aria-labelledby="db-tab">
+                   
+                </p>
+            </div>
+            
+            <div id="WR" class="tabcontent">
+                <h3>Receivers</h3>
+                <p>
+                    
+                </p> 
+            </div>
+            
+            <div id="DB" class="tabcontent">
+                <h3>Corner/Defensive Backs</h3>
+                <p>
                     <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="480" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ccfa54e0-d2b2-4aa7-bf2a-c4edba1a1c61&theme=light"></iframe>
-                </div>
-                <div class="tab-pane" id="rb" role="tabpanel" aria-labelledby="settings-tab">...</div>
-                <div class="tab-pane" id="lb" role="tabpanel" aria-labelledby="settings-tab">...</div>
-                <div class="tab-pane" id="linemen" role="tabpanel" aria-labelledby="settings-tab">...</div>
-                <div class="tab-pane" id="specialists" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                </p>
+            </div>
+            <div id="RB" class="tabcontent">
+                <h3>Running Backs</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div id="LB" class="tabcontent">
+                <h3>Linebackers</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div id="OL" class="tabcontent">
+                <h3>Offensive Line</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div id="DL" class="tabcontent">
+                <h3>Defensive Line</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div id="specials" class="tabcontent">
+                <h3>Specialists</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <!-- End tab links -->
+            <!-- Tab script -->
+            <script>
+            function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+              
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+              
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+              
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              </script>
+              <script>
+                var tabs=document.getElementById('tabcontent').getElementsByTagName("a");
+                for (var i=0; i < tabs.length; i++) {
+                    if(tabs[i].href == element.href) 
+                        tabs[i].className="selected";
+                    else
+                        tabs[i].className="";
+                };
+                </script>
+
+    <!-- ================ end nav tabs ==================-->
+
+           
+           
+
+    <!--===============START charts====================-->
+    <section class="container-fluid section-space section-bg-1" style="margin-bottom: 60px;">
+        <div class="container" id="geodata">
+            <h1 class="left">Position Stats</h1>
+            <div class="center">
+                <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="720px" src="charts/index.html"></iframe>
+        
+
             </div>
         </div>
     </div>
+
+    <!--===============END Charts====================-->
     
     <!--================================= OUR ENVIRONMENT START =============================================-->
-    <section class="container-fluid section-space section-bg-2">
+    <section class="container-fluid section-space section-bg-1">
         <div class="container">
-            <h1 class="center">The Performance Environment</h1>
+            <h1 class="left">Performance Stats</h1>
             <div class="row">
                 <div class="col-md-4 col-sm-4 common-res-bottom-1">
+                    
                     <div class="left image-bottom">
                         <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="350" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ea0ab1a6-0525-420b-b525-018e39804b51&theme=light"></iframe>
                 
@@ -206,19 +274,19 @@
 
     
     <!--States Where Players Were Born Map-->
-    <section class="container-fluid section-space section-bg-2" style="margin-bottom: 60px;">
+    <section class="container-fluid section-space section-bg-1" style="margin-bottom: 60px;">
         <div class="container" id="geodata">
-            <h1 class="left">Geographical Info</h1>
+            <h1 class="left">Geographic Info</h1>
              <!-- The div where we will inject our map -->
-            <iframe src="map.html" width="100%" height="480px">
+            <iframe src="maps/map.html" width="100%" height="480px">
             
             </iframe>
             <div id="map"></div>
              <!-- API key -->
-            <script type="text/javascript" src="config.js"></script>
+            <script type="text/javascript" src="map/config.js"></script>
             <!-- Our JS -->
-            <script type="text/javascript" src="logic.js"></script>
-            
+            <script type="text/javascript" src="map/logic.js"></script>
+            <sub><a href="maps/map.html">View Full Screen Map</a></sub>
          </div>
     </div>
 
@@ -277,9 +345,9 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="app.js"></script>
     <!-- API key -->
-    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="maps/config.js"></script>
     <!-- Our JS -->
-    <script type="text/javascript" src="logic.js"></script>
+    <script type="text/javascript" src="maps/logic.js"></script>
 </body>
 
 
