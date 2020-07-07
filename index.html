@@ -202,8 +202,8 @@
             <div class="center">
                 <script type="module">
 
-                    import define from "https://raw.github.com/keng85/team-dashboard/master/assets/charts/observ/index.js";
-                    import {Runtime, Library, Inspector} from "https://raw.github.com/keng85/team-dashboard/master/assets/charts/observ/runtime.js";
+                    import define from "./assets/charts/observ/index.js";
+                    import {Runtime, Library, Inspector} from "./assets/charts/observ/runtime.js";
                     
                     const runtime = new Runtime();
                     const main = runtime.module(define, Inspector.into(document.body));
