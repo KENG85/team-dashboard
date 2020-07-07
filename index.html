@@ -44,7 +44,7 @@
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="css/custom/style_red.css">
-    
+    <link rel="stylesheet" type="text/css" href="./inspector.css">
     <link rel="stylesheet" type="text/css" href="https://raw.github.com/keng85/team-dashboard/master/assets/charts/observ/inspector.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -202,13 +202,13 @@
             <div class="center">
                 <script type="module">
 
-                    import define from "./assets/charts/observ/index.js";
-                    import {Runtime, Library, Inspector} from "./assets/charts/observ/runtime.js";
+                    import define from "./index.js";
+                    import {Runtime, Library, Inspector} from "./runtime.js";
                     
                     const runtime = new Runtime();
                     const main = runtime.module(define, Inspector.into(document.body));
                     
-                    </script>
+                </script>
                 
             </div>
         </div>
