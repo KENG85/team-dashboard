@@ -5,14 +5,11 @@
 <body>
     <script type="module">
 
-        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-        import define from "https://api.observablehq.com/@tmcw/hello-world.js?v=3";
+      import {Runtime, Inspector} from "@observablehq/runtime"; 
+
+      import define from "1a9353e62a82b2e7";
+      
+      const runtime = new Runtime();
+      const main = runtime.module(define, Inspector.into(document.body));
         
-        const runtime = new Runtime();
-        const main = runtime.module(define, name => {
-          if (name === "hello") {
-            return new Inspector(document.body);
-          }
-        });
-        
-        </script>
+    </script>
