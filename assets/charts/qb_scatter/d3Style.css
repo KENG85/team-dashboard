@@ -35,7 +35,7 @@
   }
   
   .chart {
-    display: block;
+    display: inherit;
     margin: 0;
   }
   
