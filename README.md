@@ -17,3 +17,12 @@ You will have ample time in class to work with your group, but expect to put in 
 4. Your project must be powered by a data set with at least 100 records.
 5. Your project must include some level of user-driven interaction (e.g., menus, dropdowns, textboxes).
 6. Your final visualization should ideally include at least three views.
+===================
+# Summary
+
+1. We scraped data from https://www.pro-football-reference.com/years/2006/ 
+2. then used google places API to locate the lat and lon of college and states.
+3. we loaded it into mongodb and used moment js library for the dates
+3. we ran into issues rendernig geojson format from pandas limiting our map display to only one layer.  
+4. charts were generated from d3, leaflet, observable and tableau. 
+5. Our data and findings were presented on an html "dashboard" webpage. 
